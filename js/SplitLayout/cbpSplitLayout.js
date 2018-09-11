@@ -40,15 +40,15 @@
 		}
 		classie.add( splitlayout, 'reset-layout' );
 
-		leftSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
+		leftSide.addEventListener( eventtype, function( ev ) {
 			reset();
 			classie.add( splitlayout, 'open-left' );
-		} );
+		},{passive: true} );
 
-		rightSide.querySelector( 'div.intro-content' ).addEventListener( eventtype, function( ev ) {
+		rightSide.addEventListener( eventtype, function( ev ) {
 			reset();
 			classie.add( splitlayout, 'open-right' );
-		} );
+		}, {passive: true} );
 
 		// back to intro
 		// after transition ends:
@@ -67,8 +67,8 @@
 				page.addEventListener( transEndEventName, onEndTransFn );
 			};
 
-		splitlayout.querySelector( 'a.back-left' ).addEventListener( eventtype, backToIntro );
-		splitlayout.querySelector( 'a.back-right' ).addEventListener( eventtype, backToIntro );
+		splitlayout.querySelector( 'a.back-left' ).addEventListener( eventtype, backToIntro,{passive: true} );
+		splitlayout.querySelector( 'a.back-right' ).addEventListener( eventtype, backToIntro,{passive: true} );
 	}
 
 	function reset() {

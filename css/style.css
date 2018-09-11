@@ -1,6 +1,7 @@
 body{
   font-family: 'Roboto', sans-serif;
   color: #f2f2f2;
+  letter-spacing: 2px;
   /* background: rgb(25, 25, 25); */
   /* font-family: 'Raleway', sans-serif; */
 }
@@ -36,7 +37,8 @@ ul{
 }
 
 .logo{
-  padding: 14px 16px 0px 16px;
+  margin-top: 5px;
+  padding: 6px 4px 0px 4px;
   width: 45px;
   height: 45px;
   fill: #f2f2f2;
@@ -118,7 +120,7 @@ ul{
   /* font-family: 'Raleway', sans-serif; */
   font-weight: 700;
   margin: 0;
-  font-size: 80%;
+  font-size: 115%;
   white-space: nowrap;
   border-right: 3px solid rgba(242, 242, 242,0.75);
   overflow: hidden;
@@ -127,6 +129,7 @@ ul{
 
 /* type animation */
 .anim-typewriter{
+  letter-spacing: normal;
   animation: typewriter 12s steps(40) forwards,
   blinkTextCursor .9s step-end infinite;
   animation-iteration-count: infinite;
@@ -220,12 +223,17 @@ ul{
 /* Adjust SplitLayout */
 
 .side-left{
-  outline: none;
   /* color: rgb(65, 65, 65); */
-  color: #f2f2f2;
   /* color: #C0C2CC; */
   /* filter: grayscale(100%); */
+  color: #f2f2f2;
   background-color: rgba(0, 0, 0,0.85);
+}
+
+.side-left,
+.side-right{
+  outline: none;
+  cursor: pointer;
 }
 
 .intro-content h1 > span:first-child {
@@ -238,14 +246,79 @@ ul{
   width: 60%;
 }
 
-.side-right{
-  outline: none;
-  /* transform: translateY(-50%) translateX(0%) scale(0.6); */
+.page-inner{
+  height: 100vh;
+  text-align: center;
+  padding: 1em;
 }
 
-.open-right{
-  /* transform: translateY(-50%) translateX(0%) scale(0.6); */
+.page-left{
+  outline: none;
+  color: #f2f2f2;
+  background-color:  rgba(0, 0, 0,0.85);
+
 }
+
+.page-inner>h1::after{
+    display: block;
+    content: "";
+    background: #0038ff;
+    height: 3px;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.skillContainer{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.skillCard{
+  /* color: rgb(65, 65, 65); */
+  /* background-color: #f2f2f2; */
+  padding: 10px;
+  margin-bottom: 2vh;
+  border: 2px solid rgb(65, 65, 65);
+  transition: all .5s ease;
+}
+
+.skillCard:hover{
+  border: 2px solid #f2f2f2;
+}
+
+.skillName{
+  margin-bottom: 20px;
+}
+
+.fa-html5,
+.fa-css3-alt,
+.fa-js{
+  margin-bottom: 5px;
+  font-size: 50px;
+  transition: all .5s ease .2s;
+}
+
+.skillCard:hover .fa-html5,
+.skillCard:hover .fa-css3-alt,
+.skillCard:hover .fa-js{
+  color: #0038ff;
+}
+
+.fa-html5:hover,
+.fa-css3-alt:hover,
+.fa-js:hover{
+  /* margin-bottom: 12px; */
+  color: #0038ff;
+  /* font-size: 50px; */
+}
+
+ li .descSkill{
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+
 
 .intro-content-right{
   background-image: url('../img/DSC_2948.jpg');
@@ -311,7 +384,8 @@ ul{
 }
 
 .logo-copyright{
-  padding: 14px 16px 0px 16px;
+  margin-left: 12px;
+  padding: 6px 4px 0px 4px;
   width: 35px;
   height: 35px;
   fill: #f2f2f2;
@@ -344,7 +418,7 @@ ul{
   }
 
    .line{
-    font-size: 200%;
+    font-size: 250%;
   }
 
   .titleDiv{
@@ -373,6 +447,11 @@ ul{
     height: 40px;
   }
 /* Adjust SplitLayout */
+  .side-left,
+  .side-right{
+    cursor: pointer;
+  }
+
   .intro-content-right{
     top: 50vh;
   }
@@ -384,11 +463,30 @@ ul{
       font-size: 3.5em;
   }
 
+  .skillContainer{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .skillCard{
+    width: 32%;
+  }
+
+  .page-inner>h1::after{
+    width: 30%;
+    margin-top: 10px;
+  }
+
+  li .descSkill{
+   font-size: 15px;
+   margin: 15px 0;
+ }
+
 }
 
 @media screen and (min-width: 1024px) {
    .line{
-    font-size: 250%;
+    font-size: 280%;
   }
 
   .titleDiv{
