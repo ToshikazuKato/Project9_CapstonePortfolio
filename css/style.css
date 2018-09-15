@@ -196,29 +196,6 @@ ul{
   background-color: #f2f2f2;
   color: rgb(65, 65, 65);
 }
-/* .about{
-  display: flex;
-  flex-direction: column;
-}
-.left,
-.right{
-  padding: 20px 10px;
-  text-align: center;
-}
-
-.name{
-  font-size: 2.8em;
-  margin-top: 10px;
-}
-.job{
-  font-size: 1.3em;
-}
-
-.photo{
-  width: 50%;
-  height: 30%;
-  filter: grayscale(100%);
-} */
 
 /* Adjust SplitLayout */
 
@@ -252,6 +229,61 @@ ul{
   padding: 1em;
 }
 
+.page-inner section{
+  color: rgb(80,80,80);
+}
+
+.right-content-title{
+  font-size: 1.5em;
+  margin-bottom: 5vh;
+}
+
+.right-content-title.tag::after{
+  width:65%;
+}
+
+.right-content-title::after {
+    display: block;
+    content: "";
+    background: #0038ff;
+    height: 3px;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.keywordContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fefefe;
+  min-height: 40vh;
+}
+
+.storyContainer{
+  background-color: #fefefe;
+  padding: 3vh 5vw 5vh 5vw;
+}
+
+.storyContainer .myStory{
+  text-align: left;
+  font-size: .65em;
+  letter-spacing: 2px;
+  line-height: 22px;
+  text-indent: 2vw;
+  margin-top: 3vh;
+}
+
+.storyContainer .myStory:first-of-type{
+  margin-top: 0;
+}
+
+.keywordContainer .keyword{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  font-size: 0.7em;
+}
+
 .page-left{
   outline: none;
   color: #f2f2f2;
@@ -271,13 +303,12 @@ ul{
 .skillContainer{
   display: flex;
   flex-direction: column;
-
+  align-items: center;
 }
 
 .skillCard{
-  /* color: rgb(65, 65, 65); */
-  /* background-color: #f2f2f2; */
   padding: 10px;
+  width: 100%;
   margin-bottom: 2vh;
   border: 2px solid rgb(65, 65, 65);
   transition: all .5s ease;
@@ -285,6 +316,7 @@ ul{
 
 .skillCard:hover{
   border: 2px solid #f2f2f2;
+  /* box-shadow: 4px 7px rgb(31, 31, 30); */
 }
 
 .skillName{
@@ -452,10 +484,6 @@ ul{
     cursor: pointer;
   }
 
-  .intro-content-right{
-    top: 50vh;
-  }
-
   .intro-content-left{
     width: 80%;
   }
@@ -463,13 +491,9 @@ ul{
       font-size: 3.5em;
   }
 
-  .skillContainer{
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
   .skillCard{
-    width: 32%;
+    width: 50%;
+    margin-bottom: 5vh;
   }
 
   .page-inner>h1::after{
@@ -482,6 +506,34 @@ ul{
    margin: 15px 0;
  }
 
+ .intro-content-right{
+   top: 50vh;
+ }
+ .right-content-title{
+   width: 95%;
+   margin-left: auto;
+ }
+
+ .keywordContainer,
+ .storyContainer{
+   width: 95%;
+   margin-left: auto;
+   min-height: 35vh;
+ }
+
+ .storyContainer{
+   padding: 25px;
+ }
+
+ .right-content-title.tag::after{
+   width: 35%;
+ }
+
+ .right-content-title::after{
+   width: 25%;
+   margin: 10px auto 0px auto;
+ }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -491,6 +543,22 @@ ul{
 
   .titleDiv{
     border-left: 8px solid #0038ff;
+  }
+
+  .right-content-title{
+    width: 75%;
+    margin-left: auto;
+  }
+
+  .keywordContainer{
+    margin-left: auto;
+    width: 75%;
+    min-height: 45vh;
+  }
+
+  .storyContainer{
+    margin-left: auto;
+    width: 75%;
   }
 
   .logo-copyright{
@@ -509,6 +577,37 @@ ul{
     .intro-content-right{
       top: 25vh;
     }
+
+    .right-content-title.tag::after{
+      width: 25%;
+    }
+
+    .right-content-title::after{
+      width: 20%;
+    }
+
+    .right-content-title{
+      width: 80%;
+      margin-left: auto;
+    }
+
+    .keywordContainer,
+    .storyContainer{
+      width: 80%;
+    }
+
+    .storyContainer .myStory{
+      line-height: 30px;
+    }
+
+}
+
+@media screen and (device-width: 411px) and  (device-height:823px){
+  /* Adjust SplitLayout */
+    .intro-content-right{
+      top: 50vh;
+    }
+
 }
 
 /* .overlay{

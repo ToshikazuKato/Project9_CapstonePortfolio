@@ -58,7 +58,6 @@
 				//document.body.scrollTop = document.documentElement.scrollTop = 0;
 			},
 			backToIntro = function( ev ) {
-				ev.preventDefault();
 				ev.stopPropagation();
 				var dir = classie.has( ev.target, 'back-right' ) ? 'left' : 'right',
 					page = dir === 'right' ? pageRight : pageLeft;

@@ -1,4 +1,4 @@
-html, body, 
+html, body,
 .container {
 	position: relative;
 	width: 100%;
@@ -291,6 +291,7 @@ body {
 }
 
 .open-right .side-right .intro-content {
+	top: 50vh;
 	-webkit-transform: translateY(-50%) translateX(0%) scale(0.6);
 	transform: translateY(-50%) translateX(0%) scale(0.6);
 }
@@ -381,7 +382,7 @@ body {
 	}
 
 	.open-right .side-right .intro-content {
-		top: 100%;
+		top:25vh;
 		-webkit-transform: translateY(-150px) translateX(-12.5%) scale(0.5);
 		transform: translateY(-150px) translateX(-12.5%) scale(0.5);
 	}
